@@ -55,7 +55,9 @@
                         <td>{{ \Carbon\Carbon::parse($clone->bucket)->format('Y-m-d') }}</td>
                         <td>{{ $clone->repository }}</td>
                         <td>{{ $clone->total }}</td>
-                        <td>{{ $clone->unique }}</td>
+                        <td>{{ $clone->unique }}
+					        <small title="About {{ number_format( $clone->unique / $clone->total * 100, 2 ) }}% of clones were from unique users"><small style="opacity: 0.75;">(</small>{{ number_format( $clone->unique / $clone->total * 100) }}<small>%<small><small style="opacity: 0.75;">)</small></small>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
@@ -76,7 +78,9 @@
                         <td>{{ \Carbon\Carbon::parse($clone->bucket)->format('Y-m-d') }}</td>
                         <td>{{ $clone->repository }}</td>
                         <td>{{ $clone->total }}</td>
-                        <td>{{ $clone->unique }}</td>
+                        <td>{{ $clone->unique }}
+					        <small title="About {{ number_format( $clone->unique / $clone->total * 100, 2 ) }}% of clones were from unique users"><small style="opacity: 0.75;">(</small>{{ number_format( $clone->unique / $clone->total * 100) }}<small>%<small><small style="opacity: 0.75;">)</small></small>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
@@ -97,7 +101,9 @@
                         <td>{{ \Carbon\Carbon::parse($clone->bucket)->format('Y-m-d') }}</td>
                         <td>{{ $clone->repository }}</td>
                         <td>{{ $clone->total }}</td>
-                        <td>{{ $clone->unique }}</td>
+                        <td>{{ $clone->unique }}
+					        <small title="About {{ number_format( $clone->unique / $clone->total * 100, 2 ) }}% of clones were from unique users"><small style="opacity: 0.75;">(</small>{{ number_format( $clone->unique / $clone->total * 100) }}<small>%<small><small style="opacity: 0.75;">)</small></small>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
