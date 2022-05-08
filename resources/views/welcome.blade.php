@@ -34,53 +34,20 @@
             margin: 0 20px;
         }
     </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
 </head>
 <body>
     <h1>HydePHP Statistics</h1>
 
     <section>
         <h2>Clone Charts</h2>
-        <canvas id="myChart" width="400" height="400" style="max-width: 800px; max-height: 400px;"></canvas>
-       
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-     
-<script>
-const ctx = document.getElementById('myChart');
-
-var total = {
-    label: "Total",
-    data: {!! json_encode($clonesHyde->pluck('total')) !!},
-    lineTension: 0,
-    fill: false,
-    borderColor: 'green'
-  };
-
-var unique = {
-    label: "Unique",
-    data: {!! json_encode($clonesHyde->pluck('unique')) !!},
-    lineTension: 0,
-    fill: false,
-  borderColor: 'blue'
-  };
-
-var data = {
-  labels: {!! json_encode($clonesHyde->pluck('date')) !!},
-  datasets: [total, unique]
-};
-
-const myChart = new Chart(ctx, {
-    type: 'line',
-    data: data,
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-</script>
- 
+        <x-clones-chart :clones="$clonesHyde" />
+        <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
+        <x-clones-chart :clones="$clonesFramework" />
+        <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
+        <x-clones-chart :clones="$clonesHydeFront" />
     </section>
 {{-- 
     <section>
