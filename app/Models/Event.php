@@ -18,4 +18,16 @@ class Event extends Model
         'total',
         'unique',
     ];
+
+    /**
+     * @param  string  $value
+     * @return \Illuminate\Database\Eloquent\Casts\Attribute
+     */
+    protected function date(): \Illuminate\Database\Eloquent\Casts\Attribute
+    {
+        return new \Illuminate\Database\Eloquent\Casts\Attribute(
+            get: fn ($value) =>  \Carbon\Carbon::parse($this->bucket)->format('Y-m-d'),
+        );
+    }
+
 }
