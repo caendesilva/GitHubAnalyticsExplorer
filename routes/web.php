@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', SyncController::class);
+Route::get('/sync', SyncController::class);
