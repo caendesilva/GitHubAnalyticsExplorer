@@ -19,11 +19,9 @@ class SyncController extends Controller
         echo "<h1>Syncing records with the GitHub API</h1>\n";
         echo "<pre>\n";
     
-        $this->syncClones('hydephp/framework');
         $this->syncClones('hydephp/hyde');
+        $this->syncClones('hydephp/framework');
         $this->syncClones('hydephp/hydefront');
-
-
 
         echo "\n\nDone. Finished in " . (microtime(true) - $time_start) * 1000 . "ms\n";
     }
