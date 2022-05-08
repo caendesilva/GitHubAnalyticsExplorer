@@ -17,6 +17,9 @@ class HomeController extends Controller
     {
         return view('welcome', [
             'events' => Event::all(),
+            'clonesHyde' => Event::where('type', 'traffic/clones')
+                ->where('repository', 'hydephp/hyde')
+                ->get()->sortBy('bucket'),
         ]);
     }
 }
