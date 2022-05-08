@@ -10,6 +10,8 @@ class SyncController extends Controller
     /**
      * Download and sync the records.
      * Can be called from Artisan or a job.
+     * 
+     * @see https://docs.github.com/en/rest/metrics/traffic
      */
     public function __invoke()
     {
