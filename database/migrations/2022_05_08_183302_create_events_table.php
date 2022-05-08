@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('repository');
             $table->integer('total');
             $table->integer('unique');
-            $table->integer('bucket');
+            $table->string('bucket');
         });
     }
 
