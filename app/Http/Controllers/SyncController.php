@@ -13,16 +13,21 @@ class SyncController extends Controller
      */
     public function __invoke()
     {
-        // Sync clone traffic for hydephp/framework
+        $time_start = microtime(true);
         echo '<pre>';
     
-        echo "Syncing clone traffic for hydephp/framework\n";    
-        $this->syncClones('hydephp/framework', 'traffic/clones');
+        $this->syncClones('hydephp/framework');
+        $this->syncClones('hydephp/hyde');
+        $this->syncClones('hydephp/hydefront');
+
+        echo "\n\nDone. Finished in " . (microtime(true) - $time_start) * 1000 . "ms\n";
     }
 
-
-    protected function syncClones($repository, $type)
+    protected function syncClones($repository)
     {
+        echo "\nSyncing clone traffic for $repository\n\n";    
+        $type = 'traffic/clones';
+
         echo "Requesting response from GitHub\n";
         $response = Http::withToken(config('services.github.token'))->withHeaders([
             'Accept' => 'application/vnd.github.v3+json',
