@@ -29,11 +29,24 @@ class HomeController extends Controller
                 ->where('repository', 'hydephp/hydefront')
                 ->get()->sortBy('bucket'),
 
+            'viewsHyde' => Event::where('type', 'traffic/views')
+                ->where('repository', 'hydephp/hyde')
+                ->get()->sortBy('bucket'),
+
+            'viewsFramework' => Event::where('type', 'traffic/views')
+                ->where('repository', 'hydephp/framework')
+                ->get()->sortBy('bucket'),
+
+            'viewsHydeFront' => Event::where('type', 'traffic/views')
+                ->where('repository', 'hydephp/hydefront')
+                ->get()->sortBy('bucket'),
+
             'dateRange' => $this->getDateRange()
         ]);
     }
 
-    protected function getDateRange(): array {
+    protected function getDateRange(): array
+    {
         $oldest = Event::min('bucket');
         $newest = Event::max('bucket');
 
