@@ -84,8 +84,6 @@ class SyncController extends Controller
             'unique' => $event->uniques,
             'origin' => 'github',
         ]);
-
-        $event->save();
     }
 
     protected function syncPackagistFrameworkStats()
