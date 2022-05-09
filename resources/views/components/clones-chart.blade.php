@@ -37,7 +37,7 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Daily clone activity for repository {{ $clones->first()->repository }}',
+                        text: '{{ $clones->first()->repository }}',
                         color: 'black',
                         font: {
                             size: 18,

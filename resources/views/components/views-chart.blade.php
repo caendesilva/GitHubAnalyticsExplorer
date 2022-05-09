@@ -37,7 +37,7 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Daily view activity for repository {{ $views->first()->repository }}',
+                        text: '{{ $views->first()->repository }}',
                         color: 'black',
                         font: {
                             size: 18,
