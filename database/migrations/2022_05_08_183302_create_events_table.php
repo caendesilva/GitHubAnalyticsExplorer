@@ -18,9 +18,9 @@ return new class extends Migration
             $table->timestamps();
             $table->string('type');
             $table->string('repository');
+            $table->string('bucket');
             $table->integer('total');
             $table->integer('unique');
-            $table->string('bucket');
         });
     }
 
