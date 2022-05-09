@@ -1,4 +1,3 @@
-
 <?php
 
 return [
@@ -35,5 +34,4 @@ return [
     'github' => [
         'token' => env('GITHUB_TOKEN'),
     ],
-
 ];
