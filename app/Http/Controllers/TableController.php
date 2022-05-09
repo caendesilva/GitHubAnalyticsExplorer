@@ -19,4 +19,9 @@ class TableController extends Controller
             'events' => Event::all()->makeHidden(['created_at', 'updated_at'])->append('time')->toArray(),
         ]);
     }
+
+    public function json(Request $request)
+    {
+        return Event::all()->makeHidden(['created_at', 'updated_at'])->append('time');
+    }
 }

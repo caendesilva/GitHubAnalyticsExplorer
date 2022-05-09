@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeController::class);
 Route::get('/sync', SyncController::class);
 Route::get('/table', TableController::class);
+Route::get('/table.json', [TableController::class, 'json']);
