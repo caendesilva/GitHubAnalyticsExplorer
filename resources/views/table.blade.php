@@ -70,17 +70,17 @@
         </h1>
         <menu role="toolbar">
             <li>
-                <a href="/table.json">View JSON</a>
+                <a href="table.json">View JSON</a>
             </li>
             <li>
-                <a href="/table.json" download>Download JSON</a>
+                <a href="table.json" download>Download JSON</a>
             </li>
         </menu>
     </header>
     <nav>
         <ul>
-            <li><a href="/">Start Page</a></li>
-            <li><a aria-curent="page" class="active" href="/table">Database Viewer</a></li>
+            <li><a href="./">Start Page</a></li>
+            <li><a aria-curent="page" class="active" href="table">Database Viewer</a></li>
             <li><a href="https://hydephp.github.io/">Back to Hyde
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"
                 alt="External link"></a></li>
