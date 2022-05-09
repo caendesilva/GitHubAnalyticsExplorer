@@ -23,6 +23,10 @@ class SyncController extends Controller
         $this->syncClones('hydephp/framework');
         $this->syncClones('hydephp/hydefront');
 
+        $this->syncViews('hydephp/hyde');
+        $this->syncViews('hydephp/framework');
+        $this->syncViews('hydephp/hydefront');
+
         echo "\n\nDone. Finished in " . (microtime(true) - $time_start) * 1000 . "ms\n";
     }
 
@@ -41,6 +45,25 @@ class SyncController extends Controller
 
         foreach($response->object()->clones as $clone) {
             $this->syncEvent($repository, $type, $clone);
+        }
+    }
+
+    
+    protected function syncViews($repository)
+    {
+        echo "\nSyncing view traffic for $repository\n\n";
+        $type = 'traffic/views';
+
+        echo "Requesting response from GitHub\n";
+        $response = Http::withToken(config('services.github.token'))->withHeaders([
+            'Accept' => 'application/vnd.github.v3+json',
+            'User-Agent' => 'github.com/caendesilva/GitHubAnalyticsExplorer',
+        ])->get('https://api.github.com/repos/' . $repository . '/' . $type);
+
+        echo "Got response: ".$response->status() ." \n";
+        
+        foreach($response->object()->views as $view) {
+            $this->syncEvent($repository, $type, $view);
         }
     }
   
