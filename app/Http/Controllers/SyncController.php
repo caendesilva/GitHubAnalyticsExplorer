@@ -34,7 +34,7 @@ class SyncController extends Controller
         echo "Requesting response from GitHub\n";
         $response = Http::withToken(config('services.github.token'))->withHeaders([
             'Accept' => 'application/vnd.github.v3+json',
-            'User-Agent' => 'github.com/caendesilva',
+            'User-Agent' => 'github.com/caendesilva/GitHubAnalyticsExplorer',
         ])->get('https://api.github.com/repos/' . $repository . '/' . $type);
 
         echo "Got response: ".$response->status() ." \n";
