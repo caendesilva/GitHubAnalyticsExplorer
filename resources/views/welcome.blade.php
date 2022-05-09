@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HydePHP Statistics</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
         nav {
             position: absolute;
             top: 0;
@@ -87,5 +91,39 @@
         </section>
     </main>
 
+    <footer style="background: lightgray; padding: 8px; margin-top: 40px; text-align: center;">
+        <table width="100%;">
+            <tr>
+                <td width="25%">
+                    
+                </td>
+                <td width="50%">
+                    <p>
+                        <a href="https://github.com/caendesilva/GitHubAnalyticsExplorer">HydePHP Statistics</a>
+                        - <a href="https://github.com/hydephp/hyde/blob/master/LICENSE.md" rel="license">License MIT</a>
+                        - <a href="https://github.com/caendesilva/GitHubAnalyticsExplorer">Source Code</a>
+                    </p>
+                    
+                    <p>
+                        <i>
+                            Site compiled <time datetime="{{ now()->format('c') }}" title="{{ now()->format('c') }}">{{ str_replace('+0000', ' UTC', now()->format('r')) }}
+                        </i>
+                    </p>
+                </td>
+                <td width="25%" style="text-align: left">
+                    <dl>
+                        <dt><b>Attributions:</b></dt>
+                        <dd>
+                            Application built with <a href="https://laravel.com/">Laravel</a>.
+                        </dd>
+                        <dd>
+                            Charts created using <a href="https://www.chartjs.org/">Chart.js</a>
+                            with data from the <a href="https://github.com/">GitHub</a> and <a href="https://packagist.org/">Packagist</a> APIs.
+                        </dd>
+                    </dl>
+                </td>
+            </tr>
+        </table>
+    </footer>
 </body>
 </html>
