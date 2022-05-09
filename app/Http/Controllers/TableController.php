@@ -16,12 +16,12 @@ class TableController extends Controller
     public function __invoke(Request $request)
     {
         return view('table', [
-            'events' => Event::all()->makeHidden(['created_at', 'updated_at'])->append('time')->toArray(),
+            'events' => Event::all()->makeHidden(['created_at', 'updated_at'])->toArray(),
         ]);
     }
 
     public function json(Request $request)
     {
-        return Event::all()->makeHidden(['created_at', 'updated_at'])->append('time');
+        return Event::all()->makeHidden(['created_at', 'updated_at']);
     }
 }
