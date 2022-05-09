@@ -19,13 +19,15 @@ class SyncController extends Controller
         echo "<h1>Syncing records with the GitHub API</h1>\n";
         echo "<pre>\n";
     
-        $this->syncClones('hydephp/hyde');
-        $this->syncClones('hydephp/framework');
-        $this->syncClones('hydephp/hydefront');
+        // $this->syncClones('hydephp/hyde');
+        // $this->syncClones('hydephp/framework');
+        // $this->syncClones('hydephp/hydefront');
 
-        $this->syncViews('hydephp/hyde');
-        $this->syncViews('hydephp/framework');
-        $this->syncViews('hydephp/hydefront');
+        // $this->syncViews('hydephp/hyde');
+        // $this->syncViews('hydephp/framework');
+        // $this->syncViews('hydephp/hydefront');
+
+        $this->syncPackagistFrameworkStats();
 
         echo "\n\nDone. Finished in " . (microtime(true) - $time_start) * 1000 . "ms\n";
     }
@@ -84,5 +86,45 @@ class SyncController extends Controller
         ]);
 
         $event->save();
+    }
+
+    protected function syncPackagistFrameworkStats()
+    {
+        echo "\nSyncing Packagist framework stats\n\n";
+        
+        $response = Http::withHeaders([
+            'Accept' => 'application/json',
+            'User-Agent' => 'github.com/caendesilva/GitHubAnalyticsExplorer',
+        ])->get('https://packagist.org/packages/hyde/framework/stats/all.json');
+
+
+        $labels = $response->json()['labels'];
+        $values = $response->json()['values']['hyde/framework'];
+
+        $data = [];
+
+        foreach($labels as $index => $label) {
+            $data[$index] = [
+                'label' => $label,
+                'value' => $values[$index],
+                'bucket' => $label.'T00:00:00Z',
+            ];
+        }
+
+        foreach ($data as $day) {
+            $event = Event::where([
+                'repository' => 'hyde/framework',
+                'type' => 'composer/installs',
+                'bucket' => $day['bucket'],
+                'origin' => 'packagist',
+            ])->firstOrCreate([
+                'repository' => 'hyde/framework',
+                'type' => 'composer/installs',
+                'bucket' => $day['bucket'],
+                'origin' => 'packagist',
+                'total' => $day['value'],
+                'unique' => null,
+            ]);
+        }
     }
 }
