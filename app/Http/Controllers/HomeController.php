@@ -28,6 +28,23 @@ class HomeController extends Controller
             'clonesHydeFront' => Event::where('type', 'traffic/clones')
                 ->where('repository', 'hydephp/hydefront')
                 ->get()->sortBy('bucket'),
+
+            'dateRange' => $this->getDateRange()
         ]);
+    }
+
+    protected function getDateRange(): array {
+        $oldest = Event::min('bucket');
+        $newest = Event::max('bucket');
+
+        // Map all dates between oldest and newest
+        $range = [];
+        $current = $oldest;
+        while ($current <= $newest) {
+            $range[] = \Carbon\Carbon::parse($current)->format('Y-m-d');
+            $current = \Carbon\Carbon::parse($current)->addDay()->format('Y-m-d');
+        }
+
+        return array_reverse($range);
     }
 }

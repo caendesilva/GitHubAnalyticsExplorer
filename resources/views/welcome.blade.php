@@ -25,6 +25,10 @@
         }
         
         th {
+            background-color: #ddd;
+        }
+
+        thead th {
           background-color: #333;
           color: white;
         }
@@ -40,7 +44,7 @@
 </head>
 <body>
     <h1>HydePHP Statistics</h1>
-
+{{-- 
     <section>
         <h2>Daily GitHub clone activity per repository</h2>
         <x-clones-chart :clones="$clonesHyde" />
@@ -48,7 +52,66 @@
         <x-clones-chart :clones="$clonesFramework" />
         <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
         <x-clones-chart :clones="$clonesHydeFront" />
+    </section> --}}
+
+
+    <section>
+        <h2>Daily clones per repository</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>hyde</th>
+                    <th>framework</th>
+                    <th>hydefront</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($dateRange as $date)
+                    <tr>
+                        <th>{{ $date }}</th>
+                        <td>
+                            @php($event = \App\Models\Event::where([
+                                'type' => 'traffic/clones',
+                                'repository' => 'hydephp/hyde',
+                                'bucket' => $date . 'T00:00:00Z',
+                            ])->first())
+                            @if ($event)
+                            <span title="{{ $event->total }} total, {{ $event->unique }} unique">{{ $event->total }}</span>
+                            @else
+                            <span title="No data found for this date" style="cursor: help; opacity: 0.5;">&ndash;</span>
+                            @endif
+                        </td>
+                        <td>
+                            @php($event = \App\Models\Event::where([
+                                'type' => 'traffic/clones',
+                                'repository' => 'hydephp/framework',
+                                'bucket' => $date . 'T00:00:00Z',
+                            ])->first())
+                            @if ($event)
+                            <span title="{{ $event->total }} total, {{ $event->unique }} unique">{{ $event->total }}</span>
+                            @else
+                            <span title="No data found for this date" style="cursor: help; opacity: 0.5;">&ndash;</span>
+                            @endif
+                        </td>
+                        <td>
+                            @php($event = \App\Models\Event::where([
+                                'type' => 'traffic/clones',
+                                'repository' => 'hydephp/hydefront',
+                                'bucket' => $date . 'T00:00:00Z',
+                            ])->first())
+                            @if ($event)
+                            <span title="{{ $event->total }} total, {{ $event->unique }} unique">{{ $event->total }}</span>
+                            @else
+                            <span title="No data found for this date" style="cursor: help; opacity: 0.5;">&ndash;</span>
+                            @endif
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </section>
+
 {{-- 
     <section>
         <h2>Total GitHub Clones per day</h2>
