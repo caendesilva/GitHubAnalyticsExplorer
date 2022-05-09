@@ -30,4 +30,14 @@ class Event extends Model
         );
     }
 
+    /**
+     * @param  string  $value
+     * @return \Illuminate\Database\Eloquent\Casts\Attribute
+     */
+    protected function time(): \Illuminate\Database\Eloquent\Casts\Attribute
+    {
+        return new \Illuminate\Database\Eloquent\Casts\Attribute(
+            get: fn ($value) =>  strtotime($this->bucket),
+        );
+    }
 }
