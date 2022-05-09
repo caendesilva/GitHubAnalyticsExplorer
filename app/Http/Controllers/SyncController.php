@@ -57,6 +57,7 @@ class SyncController extends Controller
             'bucket' => $event->timestamp,
             'total' => $event->count,
             'unique' => $event->uniques,
+            'origin' => 'github',
         ]);
 
         $event->save();

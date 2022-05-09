@@ -15,6 +15,7 @@ class Event extends Model
         'repository',
         'type',
         'bucket',
+        'origin',
         'total',
         'unique',
     ];
