@@ -27,12 +27,12 @@ class StaticSiteBuilder extends Controller
 
         echo "Compiling index.html ";    
         $process_start = microtime(true);
-        file_put_contents(base_path('docs/index.html'), Http::get('localhost:8000/')->body());
+        file_put_contents(base_path('docs/index.html'), $this->process(Http::get('localhost:8000/')->body()));
         echo round((microtime(true) - $process_start) * 1000, 2) . "ms\n";
 
         echo "Compiling table.html ";    
         $process_start = microtime(true);
-        file_put_contents(base_path('docs/table.html'), Http::get('localhost:8000/table')->body());
+        file_put_contents(base_path('docs/table.html'), $this->process(Http::get('localhost:8000/table')->body()));
         echo round((microtime(true) - $process_start) * 1000, 2) . "ms\n";
 
         echo "<h2>Downloading data</h2>"; 
@@ -43,5 +43,13 @@ class StaticSiteBuilder extends Controller
         echo round((microtime(true) - $process_start) * 1000, 2) . "ms\n";
 
         echo "\n<h2>Done. Finished in " . round((microtime(true) - $time_start) * 1000, 2). "ms</h2>\n";
+    }
+
+    protected function process(string $html): string
+    {
+        $html = str_replace('href="table"', 'href="table.html"', $html);
+        $html = str_replace('href="./"', 'href="index.html"', $html);
+
+        return $html;
     }
 }
