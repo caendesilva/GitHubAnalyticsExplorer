@@ -99,7 +99,7 @@
                 </td>
                 <td width="50%">
                     <p>
-                        <a href="https://github.com/caendesilva/GitHubAnalyticsExplorer">HydePHP Statistics</a>
+                        <a href="https://caendesilva.github.io/GitHubAnalyticsExplorer/">HydePHP Statistics</a>
                         - <a href="https://github.com/hydephp/hyde/blob/master/LICENSE.md" rel="license">License MIT</a>
                         - <a href="https://github.com/caendesilva/GitHubAnalyticsExplorer">Source Code</a>
                     </p>
