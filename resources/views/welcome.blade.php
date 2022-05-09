@@ -106,7 +106,7 @@
                     
                     <p>
                         <i>
-                            Site compiled <time datetime="{{ now()->format('c') }}" title="{{ now()->format('c') }}">{{ str_replace('+0000', ' UTC', now()->format('r')) }}
+                            Site compiled <time datetime="{{ now()->format('c') }}" title="{{ now()->format('c') }}">{{ str_replace('+0000', ' UTC', now()->format('r')) }}</time>
                         </i>
                     </p>
                 </td>
