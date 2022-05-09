@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->string('origin')->after('bucket')->nullable();
+            $table->string('origin')->after('id')->nullable();
         });
     }
 
