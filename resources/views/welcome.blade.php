@@ -42,7 +42,7 @@
     <h1>HydePHP Statistics</h1>
 
     <section>
-        <h2>Clone Charts</h2>
+        <h2>Daily GitHub clone activity per repository</h2>
         <x-clones-chart :clones="$clonesHyde" />
         <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
         <x-clones-chart :clones="$clonesFramework" />
