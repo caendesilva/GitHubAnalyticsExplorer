@@ -32,19 +32,60 @@
             margin-right: 12px;
         }
     </style>
+    <style>
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            text-align: center;
+            padding: 8px 12px;
+            text-decoration: none;
+            background: gainsboro;
+            border-right: 1px solid gray;
+            overflow: visible;
+        }
+        nav ul li a:hover, nav ul li a:focus, nav ul li a.active {
+            background: lightgray;
+        }
+        nav ul li:last-child a {
+            border-right: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        HydePHP Raw Data
-    </h1>
-    <menu role="toolbar">
-        <li>
-            <a href="/table.json">View JSON</a>
-        </li>
-        <li>
-            <a href="/table.json" download>Download JSON</a>
-        </li>
-    </menu>
+    <header>
+        <h1>
+            HydePHP Raw Data
+        </h1>
+        <menu role="toolbar">
+            <li>
+                <a href="/table.json">View JSON</a>
+            </li>
+            <li>
+                <a href="/table.json" download>Download JSON</a>
+            </li>
+        </menu>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Start Page</a></li>
+            <li><a aria-curent="page" class="active" href="/table">Database Viewer</a></li>
+            <li><a href="https://hydephp.github.io/">Back to Hyde
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"
+                alt="External link"></a></li>
+        </ul>
+    </nav>
 	<table>
         <thead>
             <tr>
