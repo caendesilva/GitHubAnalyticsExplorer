@@ -67,28 +67,40 @@
         </p>
     </header>
 
-    <main style="display: flex; justify-content: center; overflow-x: auto;">
-        <section style="min-width: 800px; border: 1px solid lightgray;">
-            <h2 style="text-align: center;">Daily GitHub clone activity per repository</h2>
-            <div style="padding: 10px 20px;">
-                <x-clones-chart :clones="$clonesHyde" />
-                <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
-                <x-clones-chart :clones="$clonesFramework" />
-                <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
-                <x-clones-chart :clones="$clonesHydeFront" />
-            </div>
-        </section>
-    
-        <section style="min-width: 800px; border: 1px solid lightgray;">
-            <h2 style="text-align: center;">Daily GitHub view activity per repository</h2>
-            <div style="padding: 10px 20px;">
-                <x-views-chart :views="$viewsHyde" />
-                <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
-                <x-views-chart :views="$viewsFramework" />
-                <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
-                <x-views-chart :views="$viewsHydeFront" />
-            </div>
-        </section>
+    <main>
+        <div style="display: flex; justify-content: center; overflow-x: auto;">
+            <section style="min-width: 800px; border: 1px solid lightgray;">
+                <h2 style="text-align: center;">Daily GitHub clone activity per repository</h2>
+                <div style="padding: 10px 20px;">
+                    <x-clones-chart :clones="$clonesHyde" />
+                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
+                    <x-clones-chart :clones="$clonesFramework" />
+                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
+                    <x-clones-chart :clones="$clonesHydeFront" />
+                </div>
+            </section>
+        
+            <section style="min-width: 800px; border: 1px solid lightgray;">
+                <h2 style="text-align: center;">Daily GitHub view activity per repository</h2>
+                <div style="padding: 10px 20px;">
+                    <x-views-chart :views="$viewsHyde" />
+                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
+                    <x-views-chart :views="$viewsFramework" />
+                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
+                    <x-views-chart :views="$viewsHydeFront" />
+                </div>
+            </section>
+        </div>
+
+        <div style="display: flex; justify-content: center; overflow-x: auto;">
+            <section style="min-width: 1600px; max-width: 100vw; border: 1px solid lightgray;">
+                <h2 style="text-align: center;">Daily Packagist Installs</h2>
+                <p style="text-align: center;">Timeline might not be synced with GitHub data</p>
+                <div style="padding: 10px 20px;">
+                    <x-packagist-installs-chart />
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer style="background: lightgray; padding: 8px; margin-top: 40px; text-align: center;">
