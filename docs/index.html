@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,23 @@
             margin: 0;
             padding: 0;
         }
+
         nav {
             position: absolute;
             top: 0;
             right: 0;
         }
+
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
+
         nav ul li {
             float: left;
         }
+
         nav ul li a {
             display: block;
             text-align: center;
@@ -32,23 +37,28 @@
             border-right: 1px solid gray;
             overflow: visible;
         }
-        nav ul li a:hover, nav ul li a:focus, nav ul li a.active {
+
+        nav ul li a:hover,
+        nav ul li a:focus,
+        nav ul li a.active {
             background: lightgray;
         }
+
         nav ul li:last-child a {
             border-right: none;
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>
+
 <body>
     <nav>
         <ul>
             <li><a aria-current="page" class="active" href="index.html">Start Page</a></li>
             <li><a href="table.html">Database Viewer</a></li>
             <li><a href="https://hydephp.github.io/">Back to Hyde
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"
-                alt="External link"></a></li>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"
+                        alt="External link"></a></li>
         </ul>
     </nav>
 
@@ -63,7 +73,7 @@
         </p>
         <p>
             Learn more about Hyde, and try it out for yourself, at
-            <a href="https://hydephp.github.io/">https://hydephp.github.io/</a>! 
+            <a href="https://hydephp.github.io/">https://hydephp.github.io/</a>!
         </p>
     </header>
 
@@ -73,436 +83,448 @@
                 <h2 style="text-align: center;">Daily GitHub clone activity per repository</h2>
                 <div style="padding: 10px 20px;">
                     <section style="max-width: 800px; max-height: 400px;  margin-bottom: 100px;">
-    <canvas id="ch_7370c68c590964574bfe5e4f6a3b5d4b" width="400" height="400" style="max-width: 100%; max-height: 100%;"></canvas>
-    
-    <script>
-        const ctxch_7370c68c590964574bfe5e4f6a3b5d4b = document.getElementById('ch_7370c68c590964574bfe5e4f6a3b5d4b');
-        
-        var total = {
-            label: "Total",
-            data: [1,64,299,49,174,217,154,29,116,75,64,89,26,11,128,1,5,35,63,57],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'green'
-        };
-        
-        var unique = {
-            label: "Unique",
-            data: [1,13,132,35,116,51,128,28,94,23,40,60,25,11,88,1,5,32,55,38],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'blue'
-        };
-        
-        var data = {
-            labels: ["2022-04-25","2022-04-27","2022-04-28","2022-04-29","2022-04-30","2022-05-01","2022-05-02","2022-05-02","2022-05-03","2022-05-04","2022-05-05","2022-05-06","2022-05-07","2022-05-10","2022-05-11","2022-05-12","2022-05-13","2022-05-14","2022-05-15","2022-05-16"],
-            datasets: [total, unique]
-        };
-        
-        const ch_7370c68c590964574bfe5e4f6a3b5d4b = new Chart(ctxch_7370c68c590964574bfe5e4f6a3b5d4b, {
-            type: 'line',
-            data: data,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: 'index',
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'hydephp/hyde',
-                        color: 'black',
-                        font: {
-                            size: 18,
-                            weight: 'bold'
-                        },
-                    },
-                    subtitle: {
-                        display: true,
-                        text: '1657 total clones, 976 unique cloners',
-                        color: '#333',
-                        font: {
-                            size: 16,
-                            weight: 'normal',
-                            style: 'italic'
-                        },
-                        padding: {
-                            bottom: 20
-                        }
-                    },
-                    tooltip: {
-                    }
-                }
-            }
-        });
-    </script>
-    
-</section>                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
+                        <canvas id="ch_39aa99ccab927377bb0d160115ef5aac" width="400" height="400"
+                            style="max-width: 100%; max-height: 100%;"></canvas>
+
+                        <script>
+                            const ctxch_39aa99ccab927377bb0d160115ef5aac = document.getElementById('ch_39aa99ccab927377bb0d160115ef5aac');
+
+                            var total = {
+                                label: "Total",
+                                data: [1, 64, 299, 49, 174, 217, 154, 29, 17, 116, 75, 64, 89, 26, 11, 128, 1, 5, 35, 63, 57],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'green'
+                            };
+
+                            var unique = {
+                                label: "Unique",
+                                data: [1, 13, 132, 35, 116, 51, 128, 28, 17, 94, 23, 40, 60, 25, 11, 88, 1, 5, 32, 55, 38],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'blue'
+                            };
+
+                            var data = {
+                                labels: ["2022-04-25", "2022-04-27", "2022-04-28", "2022-04-29", "2022-04-30", "2022-05-01", "2022-05-02", "2022-05-02", "2022-05-02", "2022-05-03", "2022-05-04", "2022-05-05", "2022-05-06", "2022-05-07", "2022-05-10", "2022-05-11", "2022-05-12", "2022-05-13", "2022-05-14", "2022-05-15", "2022-05-16"],
+                                datasets: [total, unique]
+                            };
+
+                            const ch_39aa99ccab927377bb0d160115ef5aac = new Chart(ctxch_39aa99ccab927377bb0d160115ef5aac, {
+                                type: 'line',
+                                data: data,
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    },
+                                    interaction: {
+                                        intersect: false,
+                                        mode: 'index',
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'hydephp/hyde',
+                                            color: 'black',
+                                            font: {
+                                                size: 18,
+                                                weight: 'bold'
+                                            },
+                                        },
+                                        subtitle: {
+                                            display: true,
+                                            text: '1674 total clones, 993 unique cloners',
+                                            color: '#333',
+                                            font: {
+                                                size: 16,
+                                                weight: 'normal',
+                                                style: 'italic'
+                                            },
+                                            padding: {
+                                                bottom: 20
+                                            }
+                                        },
+                                        tooltip: {
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+
+                    </section>
+                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
                     <section style="max-width: 800px; max-height: 400px;  margin-bottom: 100px;">
-    <canvas id="ch_b0ae2a14b8fbdda473bffda43a7c77d5" width="400" height="400" style="max-width: 100%; max-height: 100%;"></canvas>
-    
-    <script>
-        const ctxch_b0ae2a14b8fbdda473bffda43a7c77d5 = document.getElementById('ch_b0ae2a14b8fbdda473bffda43a7c77d5');
-        
-        var total = {
-            label: "Total",
-            data: [58,285,28,195,79,215,33,137,28,41,94,36,16,125,1,8,48,94,63],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'green'
-        };
-        
-        var unique = {
-            label: "Unique",
-            data: [10,59,11,42,26,46,13,39,17,18,46,16,9,36,1,6,11,20,23],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'blue'
-        };
-        
-        var data = {
-            labels: ["2022-04-27","2022-04-28","2022-04-29","2022-04-30","2022-05-01","2022-05-02","2022-05-02","2022-05-03","2022-05-04","2022-05-05","2022-05-06","2022-05-07","2022-05-10","2022-05-11","2022-05-12","2022-05-13","2022-05-14","2022-05-15","2022-05-16"],
-            datasets: [total, unique]
-        };
-        
-        const ch_b0ae2a14b8fbdda473bffda43a7c77d5 = new Chart(ctxch_b0ae2a14b8fbdda473bffda43a7c77d5, {
-            type: 'line',
-            data: data,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: 'index',
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'hydephp/framework',
-                        color: 'black',
-                        font: {
-                            size: 18,
-                            weight: 'bold'
-                        },
-                    },
-                    subtitle: {
-                        display: true,
-                        text: '1584 total clones, 449 unique cloners',
-                        color: '#333',
-                        font: {
-                            size: 16,
-                            weight: 'normal',
-                            style: 'italic'
-                        },
-                        padding: {
-                            bottom: 20
-                        }
-                    },
-                    tooltip: {
-                    }
-                }
-            }
-        });
-    </script>
-    
-</section>                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
+                        <canvas id="ch_eb26b18449ed40348e9a5777f7be808e" width="400" height="400"
+                            style="max-width: 100%; max-height: 100%;"></canvas>
+
+                        <script>
+                            const ctxch_eb26b18449ed40348e9a5777f7be808e = document.getElementById('ch_eb26b18449ed40348e9a5777f7be808e');
+
+                            var total = {
+                                label: "Total",
+                                data: [58, 285, 28, 195, 79, 215, 33, 18, 137, 28, 41, 94, 36, 16, 125, 1, 8, 48, 94, 63],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'green'
+                            };
+
+                            var unique = {
+                                label: "Unique",
+                                data: [10, 59, 11, 42, 26, 46, 13, 8, 39, 17, 18, 46, 16, 9, 36, 1, 6, 11, 20, 23],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'blue'
+                            };
+
+                            var data = {
+                                labels: ["2022-04-27", "2022-04-28", "2022-04-29", "2022-04-30", "2022-05-01", "2022-05-02", "2022-05-02", "2022-05-02", "2022-05-03", "2022-05-04", "2022-05-05", "2022-05-06", "2022-05-07", "2022-05-10", "2022-05-11", "2022-05-12", "2022-05-13", "2022-05-14", "2022-05-15", "2022-05-16"],
+                                datasets: [total, unique]
+                            };
+
+                            const ch_eb26b18449ed40348e9a5777f7be808e = new Chart(ctxch_eb26b18449ed40348e9a5777f7be808e, {
+                                type: 'line',
+                                data: data,
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    },
+                                    interaction: {
+                                        intersect: false,
+                                        mode: 'index',
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'hydephp/framework',
+                                            color: 'black',
+                                            font: {
+                                                size: 18,
+                                                weight: 'bold'
+                                            },
+                                        },
+                                        subtitle: {
+                                            display: true,
+                                            text: '1602 total clones, 457 unique cloners',
+                                            color: '#333',
+                                            font: {
+                                                size: 16,
+                                                weight: 'normal',
+                                                style: 'italic'
+                                            },
+                                            padding: {
+                                                bottom: 20
+                                            }
+                                        },
+                                        tooltip: {
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+
+                    </section>
+                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
                     <section style="max-width: 800px; max-height: 400px;  margin-bottom: 100px;">
-    <canvas id="ch_9bda7d45c89799950c1e4c20764b81b1" width="400" height="400" style="max-width: 100%; max-height: 100%;"></canvas>
-    
-    <script>
-        const ctxch_9bda7d45c89799950c1e4c20764b81b1 = document.getElementById('ch_9bda7d45c89799950c1e4c20764b81b1');
-        
-        var total = {
-            label: "Total",
-            data: [1,65,119,50,50,143,63,3,40,101,64,1,13,1,31,1,1,1,7],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'green'
-        };
-        
-        var unique = {
-            label: "Unique",
-            data: [1,16,55,19,41,25,25,2,11,14,25,1,4,1,7,1,1,1,3],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'blue'
-        };
-        
-        var data = {
-            labels: ["2022-04-25","2022-04-27","2022-04-28","2022-04-29","2022-04-30","2022-05-01","2022-05-02","2022-05-03","2022-05-04","2022-05-05","2022-05-06","2022-05-07","2022-05-08","2022-05-09","2022-05-11","2022-05-12","2022-05-13","2022-05-15","2022-05-16"],
-            datasets: [total, unique]
-        };
-        
-        const ch_9bda7d45c89799950c1e4c20764b81b1 = new Chart(ctxch_9bda7d45c89799950c1e4c20764b81b1, {
-            type: 'line',
-            data: data,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: 'index',
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'hydephp/hydefront',
-                        color: 'black',
-                        font: {
-                            size: 18,
-                            weight: 'bold'
-                        },
-                    },
-                    subtitle: {
-                        display: true,
-                        text: '755 total clones, 253 unique cloners',
-                        color: '#333',
-                        font: {
-                            size: 16,
-                            weight: 'normal',
-                            style: 'italic'
-                        },
-                        padding: {
-                            bottom: 20
-                        }
-                    },
-                    tooltip: {
-                    }
-                }
-            }
-        });
-    </script>
-    
-</section>                </div>
+                        <canvas id="ch_9bda7d45c89799950c1e4c20764b81b1" width="400" height="400"
+                            style="max-width: 100%; max-height: 100%;"></canvas>
+
+                        <script>
+                            const ctxch_9bda7d45c89799950c1e4c20764b81b1 = document.getElementById('ch_9bda7d45c89799950c1e4c20764b81b1');
+
+                            var total = {
+                                label: "Total",
+                                data: [1, 65, 119, 50, 50, 143, 63, 3, 40, 101, 64, 1, 13, 1, 31, 1, 1, 1, 7],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'green'
+                            };
+
+                            var unique = {
+                                label: "Unique",
+                                data: [1, 16, 55, 19, 41, 25, 25, 2, 11, 14, 25, 1, 4, 1, 7, 1, 1, 1, 3],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'blue'
+                            };
+
+                            var data = {
+                                labels: ["2022-04-25", "2022-04-27", "2022-04-28", "2022-04-29", "2022-04-30", "2022-05-01", "2022-05-02", "2022-05-03", "2022-05-04", "2022-05-05", "2022-05-06", "2022-05-07", "2022-05-08", "2022-05-09", "2022-05-11", "2022-05-12", "2022-05-13", "2022-05-15", "2022-05-16"],
+                                datasets: [total, unique]
+                            };
+
+                            const ch_9bda7d45c89799950c1e4c20764b81b1 = new Chart(ctxch_9bda7d45c89799950c1e4c20764b81b1, {
+                                type: 'line',
+                                data: data,
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    },
+                                    interaction: {
+                                        intersect: false,
+                                        mode: 'index',
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'hydephp/hydefront',
+                                            color: 'black',
+                                            font: {
+                                                size: 18,
+                                                weight: 'bold'
+                                            },
+                                        },
+                                        subtitle: {
+                                            display: true,
+                                            text: '755 total clones, 253 unique cloners',
+                                            color: '#333',
+                                            font: {
+                                                size: 16,
+                                                weight: 'normal',
+                                                style: 'italic'
+                                            },
+                                            padding: {
+                                                bottom: 20
+                                            }
+                                        },
+                                        tooltip: {
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+
+                    </section>
+                </div>
             </section>
-        
+
             <section style="min-width: 800px; border: 1px solid lightgray;">
                 <h2 style="text-align: center;">Daily GitHub view activity per repository</h2>
                 <div style="padding: 10px 20px;">
                     <section style="max-width: 800px; max-height: 400px;  margin-bottom: 100px;">
-    <canvas id="ch_4467725c0de9fd06867d0488c2f17cde" width="400" height="400" style="max-width: 100%; max-height: 100%;"></canvas>
-    
-    <script>
-        const ctxch_4467725c0de9fd06867d0488c2f17cde = document.getElementById('ch_4467725c0de9fd06867d0488c2f17cde');
-        
-        var total = {
-            label: "Total",
-            data: [13,56,348,71,117,328,40,2,43,67,64,64,15,5,6,24,117,118,97,6,6,7,6,32],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'green'
-        };
-        
-        var unique = {
-            label: "Unique",
-            data: [3,3,2,6,1,1,3,1,4,3,5,5,4,1,2,9,15,16,6,4,2,3,1,4],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'blue'
-        };
-        
-        var data = {
-            labels: ["2022-04-26","2022-04-27","2022-04-28","2022-04-29","2022-04-30","2022-05-01","2022-05-02","2022-05-02","2022-05-03","2022-05-04","2022-05-05","2022-05-06","2022-05-07","2022-05-08","2022-05-09","2022-05-09","2022-05-10","2022-05-10","2022-05-11","2022-05-12","2022-05-13","2022-05-14","2022-05-15","2022-05-16"],
-            datasets: [total, unique]
-        };
-        
-        const ch_4467725c0de9fd06867d0488c2f17cde = new Chart(ctxch_4467725c0de9fd06867d0488c2f17cde, {
-            type: 'line',
-            data: data,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: 'index',
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'hydephp/hyde',
-                        color: 'black',
-                        font: {
-                            size: 18,
-                            weight: 'bold'
-                        },
-                    },
-                    subtitle: {
-                        display: true,
-                        text: '1652 total views, 104 unique visitors',
-                        color: '#333',
-                        font: {
-                            size: 16,
-                            weight: 'normal',
-                            style: 'italic'
-                        },
-                        padding: {
-                            bottom: 20
-                        }
-                    },
-                    tooltip: {
-                    }
-                }
-            }
-        });
-    </script>
-    
-</section>                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
+                        <canvas id="ch_4467725c0de9fd06867d0488c2f17cde" width="400" height="400"
+                            style="max-width: 100%; max-height: 100%;"></canvas>
+
+                        <script>
+                            const ctxch_4467725c0de9fd06867d0488c2f17cde = document.getElementById('ch_4467725c0de9fd06867d0488c2f17cde');
+
+                            var total = {
+                                label: "Total",
+                                data: [13, 56, 348, 71, 117, 328, 40, 2, 43, 67, 64, 64, 15, 5, 6, 24, 117, 118, 97, 6, 6, 7, 6, 32],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'green'
+                            };
+
+                            var unique = {
+                                label: "Unique",
+                                data: [3, 3, 2, 6, 1, 1, 3, 1, 4, 3, 5, 5, 4, 1, 2, 9, 15, 16, 6, 4, 2, 3, 1, 4],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'blue'
+                            };
+
+                            var data = {
+                                labels: ["2022-04-26", "2022-04-27", "2022-04-28", "2022-04-29", "2022-04-30", "2022-05-01", "2022-05-02", "2022-05-02", "2022-05-03", "2022-05-04", "2022-05-05", "2022-05-06", "2022-05-07", "2022-05-08", "2022-05-09", "2022-05-09", "2022-05-10", "2022-05-10", "2022-05-11", "2022-05-12", "2022-05-13", "2022-05-14", "2022-05-15", "2022-05-16"],
+                                datasets: [total, unique]
+                            };
+
+                            const ch_4467725c0de9fd06867d0488c2f17cde = new Chart(ctxch_4467725c0de9fd06867d0488c2f17cde, {
+                                type: 'line',
+                                data: data,
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    },
+                                    interaction: {
+                                        intersect: false,
+                                        mode: 'index',
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'hydephp/hyde',
+                                            color: 'black',
+                                            font: {
+                                                size: 18,
+                                                weight: 'bold'
+                                            },
+                                        },
+                                        subtitle: {
+                                            display: true,
+                                            text: '1652 total views, 104 unique visitors',
+                                            color: '#333',
+                                            font: {
+                                                size: 16,
+                                                weight: 'normal',
+                                                style: 'italic'
+                                            },
+                                            padding: {
+                                                bottom: 20
+                                            }
+                                        },
+                                        tooltip: {
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+
+                    </section>
+                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
                     <section style="max-width: 800px; max-height: 400px;  margin-bottom: 100px;">
-    <canvas id="ch_5f9173cdbe0307bed765c3759a6d08f3" width="400" height="400" style="max-width: 100%; max-height: 100%;"></canvas>
-    
-    <script>
-        const ctxch_5f9173cdbe0307bed765c3759a6d08f3 = document.getElementById('ch_5f9173cdbe0307bed765c3759a6d08f3');
-        
-        var total = {
-            label: "Total",
-            data: [5,10,99,472,68,224,175,389,98,232,105,125,77,83,8,3,42,157,242,16,37,77,205,104],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'green'
-        };
-        
-        var unique = {
-            label: "Unique",
-            data: [1,2,3,2,2,3,2,2,2,1,1,3,2,1,1,1,2,5,3,3,1,1,1,2],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'blue'
-        };
-        
-        var data = {
-            labels: ["2022-04-25","2022-04-26","2022-04-27","2022-04-28","2022-04-29","2022-04-30","2022-05-01","2022-05-02","2022-05-02","2022-05-03","2022-05-04","2022-05-05","2022-05-06","2022-05-07","2022-05-08","2022-05-09","2022-05-09","2022-05-10","2022-05-11","2022-05-12","2022-05-13","2022-05-14","2022-05-15","2022-05-16"],
-            datasets: [total, unique]
-        };
-        
-        const ch_5f9173cdbe0307bed765c3759a6d08f3 = new Chart(ctxch_5f9173cdbe0307bed765c3759a6d08f3, {
-            type: 'line',
-            data: data,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: 'index',
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'hydephp/framework',
-                        color: 'black',
-                        font: {
-                            size: 18,
-                            weight: 'bold'
-                        },
-                    },
-                    subtitle: {
-                        display: true,
-                        text: '3053 total views, 47 unique visitors',
-                        color: '#333',
-                        font: {
-                            size: 16,
-                            weight: 'normal',
-                            style: 'italic'
-                        },
-                        padding: {
-                            bottom: 20
-                        }
-                    },
-                    tooltip: {
-                    }
-                }
-            }
-        });
-    </script>
-    
-</section>                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
+                        <canvas id="ch_7beea5b17ccc15fb4d39639d98543702" width="400" height="400"
+                            style="max-width: 100%; max-height: 100%;"></canvas>
+
+                        <script>
+                            const ctxch_7beea5b17ccc15fb4d39639d98543702 = document.getElementById('ch_7beea5b17ccc15fb4d39639d98543702');
+
+                            var total = {
+                                label: "Total",
+                                data: [5, 10, 99, 472, 68, 224, 175, 389, 98, 66, 232, 105, 125, 77, 83, 8, 3, 42, 157, 242, 16, 37, 77, 205, 104],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'green'
+                            };
+
+                            var unique = {
+                                label: "Unique",
+                                data: [1, 2, 3, 2, 2, 3, 2, 2, 2, 2, 1, 1, 3, 2, 1, 1, 1, 2, 5, 3, 3, 1, 1, 1, 2],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'blue'
+                            };
+
+                            var data = {
+                                labels: ["2022-04-25", "2022-04-26", "2022-04-27", "2022-04-28", "2022-04-29", "2022-04-30", "2022-05-01", "2022-05-02", "2022-05-02", "2022-05-02", "2022-05-03", "2022-05-04", "2022-05-05", "2022-05-06", "2022-05-07", "2022-05-08", "2022-05-09", "2022-05-09", "2022-05-10", "2022-05-11", "2022-05-12", "2022-05-13", "2022-05-14", "2022-05-15", "2022-05-16"],
+                                datasets: [total, unique]
+                            };
+
+                            const ch_7beea5b17ccc15fb4d39639d98543702 = new Chart(ctxch_7beea5b17ccc15fb4d39639d98543702, {
+                                type: 'line',
+                                data: data,
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    },
+                                    interaction: {
+                                        intersect: false,
+                                        mode: 'index',
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'hydephp/framework',
+                                            color: 'black',
+                                            font: {
+                                                size: 18,
+                                                weight: 'bold'
+                                            },
+                                        },
+                                        subtitle: {
+                                            display: true,
+                                            text: '3119 total views, 49 unique visitors',
+                                            color: '#333',
+                                            font: {
+                                                size: 16,
+                                                weight: 'normal',
+                                                style: 'italic'
+                                            },
+                                            padding: {
+                                                bottom: 20
+                                            }
+                                        },
+                                        tooltip: {
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+
+                    </section>
+                    <hr style="max-width: 800px; margin-left: 0; margin-bottom: 40px; opacity: 0.5;">
                     <section style="max-width: 800px; max-height: 400px;  margin-bottom: 100px;">
-    <canvas id="ch_9e74f54fe3e0cca40193228f660216c4" width="400" height="400" style="max-width: 100%; max-height: 100%;"></canvas>
-    
-    <script>
-        const ctxch_9e74f54fe3e0cca40193228f660216c4 = document.getElementById('ch_9e74f54fe3e0cca40193228f660216c4');
-        
-        var total = {
-            label: "Total",
-            data: [4,112,98,40,9,190,141,7,68,226,116,39,3,9,29,29,1,8],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'green'
-        };
-        
-        var unique = {
-            label: "Unique",
-            data: [1,2,2,1,1,2,3,1,2,3,1,1,1,1,3,1,1,1],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'blue'
-        };
-        
-        var data = {
-            labels: ["2022-04-26","2022-04-27","2022-04-28","2022-04-29","2022-04-30","2022-05-01","2022-05-02","2022-05-02","2022-05-04","2022-05-05","2022-05-06","2022-05-08","2022-05-09","2022-05-09","2022-05-10","2022-05-11","2022-05-14","2022-05-16"],
-            datasets: [total, unique]
-        };
-        
-        const ch_9e74f54fe3e0cca40193228f660216c4 = new Chart(ctxch_9e74f54fe3e0cca40193228f660216c4, {
-            type: 'line',
-            data: data,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: 'index',
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'hydephp/hydefront',
-                        color: 'black',
-                        font: {
-                            size: 18,
-                            weight: 'bold'
-                        },
-                    },
-                    subtitle: {
-                        display: true,
-                        text: '1129 total views, 28 unique visitors',
-                        color: '#333',
-                        font: {
-                            size: 16,
-                            weight: 'normal',
-                            style: 'italic'
-                        },
-                        padding: {
-                            bottom: 20
-                        }
-                    },
-                    tooltip: {
-                    }
-                }
-            }
-        });
-    </script>
-    
-</section>                </div>
+                        <canvas id="ch_9e74f54fe3e0cca40193228f660216c4" width="400" height="400"
+                            style="max-width: 100%; max-height: 100%;"></canvas>
+
+                        <script>
+                            const ctxch_9e74f54fe3e0cca40193228f660216c4 = document.getElementById('ch_9e74f54fe3e0cca40193228f660216c4');
+
+                            var total = {
+                                label: "Total",
+                                data: [4, 112, 98, 40, 9, 190, 141, 7, 68, 226, 116, 39, 3, 9, 29, 29, 1, 8],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'green'
+                            };
+
+                            var unique = {
+                                label: "Unique",
+                                data: [1, 2, 2, 1, 1, 2, 3, 1, 2, 3, 1, 1, 1, 1, 3, 1, 1, 1],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'blue'
+                            };
+
+                            var data = {
+                                labels: ["2022-04-26", "2022-04-27", "2022-04-28", "2022-04-29", "2022-04-30", "2022-05-01", "2022-05-02", "2022-05-02", "2022-05-04", "2022-05-05", "2022-05-06", "2022-05-08", "2022-05-09", "2022-05-09", "2022-05-10", "2022-05-11", "2022-05-14", "2022-05-16"],
+                                datasets: [total, unique]
+                            };
+
+                            const ch_9e74f54fe3e0cca40193228f660216c4 = new Chart(ctxch_9e74f54fe3e0cca40193228f660216c4, {
+                                type: 'line',
+                                data: data,
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    },
+                                    interaction: {
+                                        intersect: false,
+                                        mode: 'index',
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'hydephp/hydefront',
+                                            color: 'black',
+                                            font: {
+                                                size: 18,
+                                                weight: 'bold'
+                                            },
+                                        },
+                                        subtitle: {
+                                            display: true,
+                                            text: '1129 total views, 28 unique visitors',
+                                            color: '#333',
+                                            font: {
+                                                size: 16,
+                                                weight: 'normal',
+                                                style: 'italic'
+                                            },
+                                            padding: {
+                                                bottom: 20
+                                            }
+                                        },
+                                        tooltip: {
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+
+                    </section>
+                </div>
             </section>
         </div>
 
@@ -512,68 +534,70 @@
                 <p style="text-align: center;">Timeline might not be synced with GitHub data</p>
                 <div style="padding: 10px 20px;">
                     <section style="max-width: 1600px; max-height: 400px;  margin-bottom: 100px;">
-    <canvas id="packagistInstallsChart" width="400" height="400" style="max-width: 100%; max-height: 100%;"></canvas>
-    
-    <script>
-        const ctxpackagistInstallsChart = document.getElementById('packagistInstallsChart');
-        
-        var total = {
-            label: "Total",
-            data: [0,9,17,7,15,25,15,15,4,16,0,28,30,2,0,0,2,22,14,82,106,74,76,0,1,0,9,60,10,25,46,167,9,1,0,0,0,66,417,80,239,75,272,188,32,80,112,49,0,2,26,178,0,9,66],
-            lineTension: 0,
-            fill: false,
-            borderColor: 'green'
-        };
-        
-        var data = {
-            labels: ["2022-03-21","2022-03-22","2022-03-23","2022-03-24","2022-03-25","2022-03-26","2022-03-27","2022-03-28","2022-03-29","2022-03-30","2022-03-31","2022-04-01","2022-04-02","2022-04-03","2022-04-04","2022-04-05","2022-04-06","2022-04-07","2022-04-08","2022-04-09","2022-04-10","2022-04-11","2022-04-12","2022-04-13","2022-04-14","2022-04-15","2022-04-16","2022-04-17","2022-04-18","2022-04-19","2022-04-20","2022-04-21","2022-04-22","2022-04-23","2022-04-24","2022-04-25","2022-04-26","2022-04-27","2022-04-28","2022-04-29","2022-04-30","2022-05-01","2022-05-02","2022-05-03","2022-05-04","2022-05-05","2022-05-06","2022-05-07","2022-05-08","2022-05-09","2022-05-10","2022-05-11","2022-05-12","2022-05-13","2022-05-14"],
-            datasets: [total]
-        };
-        
-        const packagistInstallsChart = new Chart(ctxpackagistInstallsChart, {
-            type: 'line',
-            data: data,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: 'index',
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'hyde/framework',
-                        color: 'black',
-                        font: {
-                            size: 18,
-                            weight: 'bold'
-                        },
-                    },
-                    subtitle: {
-                        display: true,
-                        text: '2778 total installs',
-                        color: '#333',
-                        font: {
-                            size: 16,
-                            weight: 'normal',
-                            style: 'italic'
-                        },
-                        padding: {
-                            bottom: 20
-                        }
-                    },
-                    tooltip: {
-                    }
-                }
-            }
-        });
-    </script>
-    
-</section>                </div>
+                        <canvas id="packagistInstallsChart" width="400" height="400"
+                            style="max-width: 100%; max-height: 100%;"></canvas>
+
+                        <script>
+                            const ctxpackagistInstallsChart = document.getElementById('packagistInstallsChart');
+
+                            var total = {
+                                label: "Total",
+                                data: [0, 9, 17, 7, 15, 25, 15, 15, 4, 16, 0, 28, 30, 2, 0, 0, 2, 22, 14, 82, 106, 74, 76, 0, 1, 0, 9, 60, 10, 25, 46, 167, 9, 1, 0, 0, 0, 66, 417, 80, 239, 75, 272, 188, 32, 80, 112, 49, 0, 2, 26, 178, 0, 9, 66],
+                                lineTension: 0,
+                                fill: false,
+                                borderColor: 'green'
+                            };
+
+                            var data = {
+                                labels: ["2022-03-21", "2022-03-22", "2022-03-23", "2022-03-24", "2022-03-25", "2022-03-26", "2022-03-27", "2022-03-28", "2022-03-29", "2022-03-30", "2022-03-31", "2022-04-01", "2022-04-02", "2022-04-03", "2022-04-04", "2022-04-05", "2022-04-06", "2022-04-07", "2022-04-08", "2022-04-09", "2022-04-10", "2022-04-11", "2022-04-12", "2022-04-13", "2022-04-14", "2022-04-15", "2022-04-16", "2022-04-17", "2022-04-18", "2022-04-19", "2022-04-20", "2022-04-21", "2022-04-22", "2022-04-23", "2022-04-24", "2022-04-25", "2022-04-26", "2022-04-27", "2022-04-28", "2022-04-29", "2022-04-30", "2022-05-01", "2022-05-02", "2022-05-03", "2022-05-04", "2022-05-05", "2022-05-06", "2022-05-07", "2022-05-08", "2022-05-09", "2022-05-10", "2022-05-11", "2022-05-12", "2022-05-13", "2022-05-14"],
+                                datasets: [total]
+                            };
+
+                            const packagistInstallsChart = new Chart(ctxpackagistInstallsChart, {
+                                type: 'line',
+                                data: data,
+                                options: {
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    },
+                                    interaction: {
+                                        intersect: false,
+                                        mode: 'index',
+                                    },
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'hyde/framework',
+                                            color: 'black',
+                                            font: {
+                                                size: 18,
+                                                weight: 'bold'
+                                            },
+                                        },
+                                        subtitle: {
+                                            display: true,
+                                            text: '2778 total installs',
+                                            color: '#333',
+                                            font: {
+                                                size: 16,
+                                                weight: 'normal',
+                                                style: 'italic'
+                                            },
+                                            padding: {
+                                                bottom: 20
+                                            }
+                                        },
+                                        tooltip: {
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+
+                    </section>
+                </div>
             </section>
         </div>
     </main>
@@ -582,7 +606,7 @@
         <table width="100%;">
             <tr>
                 <td width="25%">
-                    
+
                 </td>
                 <td width="50%">
                     <p>
@@ -590,10 +614,11 @@
                         - <a href="https://github.com/hydephp/hyde/blob/master/LICENSE.md" rel="license">License MIT</a>
                         - <a href="https://github.com/caendesilva/GitHubAnalyticsExplorer">Source Code</a>
                     </p>
-                    
+
                     <p>
                         <i>
-                            Site compiled <time datetime="2022-05-16T19:00:37+00:00" title="2022-05-16T19:00:37+00:00">Mon, 16 May 2022 19:00:37  UTC</time>
+                            Site compiled <time datetime="2022-05-16T19:01:27+00:00"
+                                title="2022-05-16T19:01:27+00:00">Mon, 16 May 2022 19:01:27 UTC</time>
                         </i>
                     </p>
                 </td>
@@ -605,7 +630,8 @@
                         </dd>
                         <dd>
                             Charts created using <a href="https://www.chartjs.org/">Chart.js</a>
-                            with data from the <a href="https://github.com/">GitHub</a> and <a href="https://packagist.org/">Packagist</a> APIs.
+                            with data from the <a href="https://github.com/">GitHub</a> and <a
+                                href="https://packagist.org/">Packagist</a> APIs.
                         </dd>
                     </dl>
                 </td>
@@ -613,4 +639,5 @@
         </table>
     </footer>
 </body>
+
 </html>
