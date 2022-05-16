@@ -34,6 +34,10 @@
                         beginAtZero: true
                     }
                 },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
                 plugins: {
                     title: {
                         display: true,
@@ -56,6 +60,8 @@
                         padding: {
                             bottom: 20
                         }
+                    },
+                    tooltip: {
                     }
                 }
             }
