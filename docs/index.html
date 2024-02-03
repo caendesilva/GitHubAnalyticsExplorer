@@ -43,6 +43,27 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>
 <body>
+    <noscript>
+        You are browsing the legacy version of this site, which is no longer updated.
+        Please visit the new version at <a href="https://analytics.hydephp.com">https://analytics.hydephp.com</a>.
+    </noscript>
+
+    <dialog>
+        <h2>Want to visit the new Open Analytics Platform?</h2>
+        <p>
+            You are currently browsing the legacy version of this site, which is no longer updated.
+        </p>
+        <strong>
+            Why not visit the new version at <a href="https://analytics.hydephp.com">https://analytics.hydephp.com</a>?
+        </strong>
+    </dialog>
+
+    <script>
+        const dialog = document.querySelector('dialog');
+        dialog.showModal();
+        dialog.querySelector('button').addEventListener('click', () => dialog.close());
+    </script>
+
     <nav>
         <ul>
             <li><a aria-current="page" class="active" href="index.html">Start Page</a></li>
